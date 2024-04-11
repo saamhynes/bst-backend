@@ -40,11 +40,11 @@ public class TreeService {
 
         if (value < root.getValue()) {
             TreeNode leftChild = insertNumber(root.getLeftChild(), value);
-            leftChild.setParent(root); // Set the parent for the left child
+            leftChild.setParent(root);
             root.setLeftChild(leftChild);
         } else if (value > root.getValue()) {
             TreeNode rightChild = insertNumber(root.getRightChild(), value);
-            rightChild.setParent(root); // Set the parent for the right child
+            rightChild.setParent(root);
             root.setRightChild(rightChild);
         }
 

@@ -26,7 +26,7 @@ public class TreeNode {
     @JoinColumn(name = "right_child_id")
     private TreeNode rightChild;
 
-    // Constructors
+    // constructors
     public TreeNode() {
     }
 
@@ -34,7 +34,7 @@ public class TreeNode {
         this.value = value;
     }
 
-    // Getters and Setters
+    // getters and Setters
     public Long getId() {
         return id;
     }

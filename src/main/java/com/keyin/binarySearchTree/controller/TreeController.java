@@ -32,9 +32,8 @@ public class TreeController {
     @GetMapping("/previous-trees")
     public ResponseEntity<List<TreeNodeDTO>> getPreviousTrees() {
         List<TreeNode> previousTrees = treeService.getAllTrees();
-        // Convert each TreeNode to TreeNodeDTO
         List<TreeNodeDTO> dtoList = previousTrees.stream()
-                .map(treeService::convertToDto) // Assuming convertToDto can handle a TreeNode and return a TreeNodeDTO
+                .map(treeService::convertToDto)
                 .collect(Collectors.toList());
         return new ResponseEntity<>(dtoList, HttpStatus.OK);
     }
